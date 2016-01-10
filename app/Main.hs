@@ -100,6 +100,7 @@ reverseTable = unlines
              . map dropLeadingTrailing  -- Drop outside bars
              . map replaceDividers
              . dropLeadingTrailing      -- Drop headrs
+             . map stripWhitespace
              . lines
 
 dropLeadingTrailing :: [a] -> [a]
